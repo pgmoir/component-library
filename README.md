@@ -78,7 +78,6 @@ Building a React Typescript based storybook project from scratch
 
     ```
     "preserveConstEnums": true,
-    "sourceMap": true,   
     ```
 
   * Add React dependencies (should be peerDependencies?)
