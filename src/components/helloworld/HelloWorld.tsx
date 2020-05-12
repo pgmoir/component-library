@@ -1,5 +1,10 @@
 import * as React from 'react';
 
-const HelloWorld = () => <h1>Hello World</h1>;
+export interface HelloWorldProps {
+  userName: string;
+  lang: string;
+}
+
+const HelloWorld = (props: HelloWorldProps) => <h1>Hi {props.userName} from React Typescript where we speak {props.lang}!</h1>;
 
 export default HelloWorld;

@@ -4,7 +4,7 @@ import HelloWorld from 'components/helloworld/HelloWorld';
 const App = () => {
     return (
         <>
-            <HelloWorld/>
+            <HelloWorld userName='Phil' lang='Scottish' />
         </>
     )
 };

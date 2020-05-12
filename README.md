@@ -85,10 +85,13 @@ Building a React Typescript based storybook project from scratch
     npm i @types/react @types/react-dom --save-dev
     ```
 
-  * (Optional?) Create initial App files in root
+  * (optional) Create initial App files in root
+
+    Should the index.html be created in the src/components folder
 
     ```
-    touch index.html
+    mkdir src
+    touch src/index.html
     ```
 
     ```
@@ -107,7 +110,6 @@ Building a React Typescript based storybook project from scratch
     ```
 
     ```
-    mkdir src
     touch src/index.tsx
     ```
 
@@ -131,7 +133,7 @@ Building a React Typescript based storybook project from scratch
     const App = () => {
         return (
             <>
-                <HelloWorld/>
+                <HelloWorld userName='Phil' lang='Scottish' />
             </>
         )
     };
@@ -148,7 +150,12 @@ Building a React Typescript based storybook project from scratch
     ```
     import * as React from 'react';
 
-    const HelloWorld = () => <h1>Hello World</h1>;
+    export interface HelloWorldProps {
+      userName: string;
+      lang: string;
+    }
+
+    const HelloWorld = (props: HelloWorldProps) => <h1>Hi {props.userName} from React Typescript where we speak {props.lang}!</h1>;
 
     export default HelloWorld;
     ```
@@ -164,6 +171,8 @@ Building a React Typescript based storybook project from scratch
     ```
     npm i ts-loader fork-ts-checker-webpack-plugin html-webpack-plugin --save-dev
     ```
+
+    NOTE: alternative to ts-loader is https://www.npmjs.com/package/awesome-typescript-
 
   * create webpack configuration in root
 
@@ -206,7 +215,7 @@ Building a React Typescript based storybook project from scratch
           },
           plugins: [
               new HtmlWebpackPlugin({
-                  template: './index.html'
+                  template: './src/index.html'
               }),
               new webpack.DefinePlugin({
                   'process.env.development': !!(env && !env.production),}),
@@ -215,6 +224,12 @@ Building a React Typescript based storybook project from scratch
       }
     };
     ```
+
+    * (optional) other scripts to consider
+
+    css-loader
+    mini-css-extract-plugin
+    source-map-loader
 
     * add npm scripts for start and build into package.json
 
@@ -357,3 +372,4 @@ Building a React Typescript based storybook project from scratch
 
   * [React with Typescript starter kit without create-react-app incl. Webpack & ESLint](https://medium.com/@adriancelczynski/react-with-typescript-starter-kit-without-create-react-app-including-webpack-eslint-bef225c35ffa) by 
 Adrian Celczyński
+  * [Setting TypeScript For Modern React Projects Using Webpack And Babel](https://www.smashingmagazine.com/2020/05/typescript-modern-react-projects-webpack-babel/) by Blessing Krofegha

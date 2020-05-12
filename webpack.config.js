@@ -32,7 +32,7 @@ module.exports = (env) => {
         },
         plugins: [
             new HtmlWebpackPlugin({
-                template: './index.html'
+                template: './src/index.html'
             }),
             new webpack.DefinePlugin({
                 'process.env.development': !!(env && !env.production),}),
