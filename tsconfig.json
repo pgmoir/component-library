@@ -2,6 +2,7 @@
   "compilerOptions": {
     "sourceMap": true,
     "noImplicitAny": true,
+    "outDir": "./build/",
     "module": "commonjs",
     "target": "es6",
     "lib": [
