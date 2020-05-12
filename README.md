@@ -374,6 +374,21 @@ Building a React Typescript based storybook project from scratch
     git push -u origin master
     ```
 
+    * at this point there were a few adjustments based on the second reference used
+
+    * now, add Storybook for React
+
+    ```
+    npx -p @storybook/cli sb init --type react
+    ```
+
+    ```
+    npm WARN @typescript-eslint/eslint-plugin@2.32.0 requires a peer of eslint@^5.0.0 || ^6.0.0 but none is installed. You must install peer dependencies yourself.
+    npm WARN @typescript-eslint/parser@2.32.0 requires a peer of eslint@^5.0.0 || ^6.0.0 but none is installed. You must install peer dependencies yourself.
+    npm WARN eslint-plugin-react@7.19.0 requires a peer of eslint@^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 but none is installed. You must install peer dependencies yourself.
+    npm WARN eslint-plugin-react-hooks@4.0.0 requires a peer of eslint@^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 but none is installed. You must install peer dependencies yourself.
+    ```
+
 ## References
 
   * [React with Typescript starter kit without create-react-app incl. Webpack & ESLint](https://medium.com/@adriancelczynski/react-with-typescript-starter-kit-without-create-react-app-including-webpack-eslint-bef225c35ffa) by 
