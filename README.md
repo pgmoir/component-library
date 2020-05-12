@@ -48,7 +48,8 @@ Building a React Typescript based storybook project from scratch
     {
       "compilerOptions": {
         "sourceMap": true,
-        "noImplicitAny": false,
+        "noImplicitAny": true,
+        "outDir": "./build/",
         "module": "commonjs",
         "target": "es6",
         "lib": [
